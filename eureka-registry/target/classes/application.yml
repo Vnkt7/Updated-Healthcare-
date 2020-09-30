@@ -1,0 +1,11 @@
+# Spring properties
+spring:
+  application:
+     name: health-care-registry
+server:
+  port: 8006
+eureka:
+  client:
+      registerWithEureka: false
+      fetch-registry: false
+      

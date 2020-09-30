@@ -1,0 +1,16 @@
+# Spring properties
+spring:
+  application:
+     name: zuul
+server:
+  port: 8005
+  
+zuul:
+  routes:
+    service:
+      url: http://localhost:8007
+
+ribbon:
+  eureka:
+    enabled: false  
+      

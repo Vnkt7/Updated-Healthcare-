@@ -1,0 +1,13 @@
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8006/eureka/
+  instance:
+    health-check-url: ${eureka.client.defaultZone.serviceUrl}/health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    lease-renewal-interval-in-seconds: 30
+    prefer-ip-address: false
+    secureVirtualHostName: ${spring.application.name}
+    # for local applications set host as localhost
+    hostname: localhost
